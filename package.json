@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zoton2/nodejs-template#readme",
+  "bugs": {
+    "url": "https://github.com/zoton2/nodejs-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoton2/nodejs-template.git"
+  },
+  "license": "MIT",
+  "author": "zoton2",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prebuild": "trash ./dist",
+    "build": "tsc -b ./tsconfig.json",
+    "start": "node ./dist/index.js",
+    "watch": "npm run prebuild && tsc -b ./tsconfig.json -w"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.1",
+    "trash-cli": "^7.0.0",
+    "typescript": "^5.9.3"
+  }
+}
